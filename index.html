@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="style-dark.css"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0/dist/css/tabler.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+		*{
+			font-family: "Fira Code", serif;
+			font-optical-sizing: auto;
+			font-weight: 300;
+			font-style: normal;
+		}
+	</style>
+	<title>Quinta</title>
+</head>
+<body>
+	<div class="container-fluid" id="home">
+		<div class="header-section d-flex justify-content-center gap-2" style="margin-top:5%;">
+			<div>
+				<i class="fa-solid fa-circle-notch mt-3 mx-3" style="font-size:3rem;"></i>
+			</div>
+			<div >
+				<h1 style="font-size:2rem;">
+					Quinta
+				</h1>
+				<h3>
+					System for upgrade your's
+				</h3>
+			</div>
+		</div>
+		<hr width="80%" class="mx-auto">
+
+		<div class="body-section container">
+			<div class="row border rounded p-4 mx-2 ">
+				<div class="col-12">
+					<div class="card-title mt-2 mx-4">
+						<span class="p-4 fw-bold" style="font-size: 20px;">
+							<i class="fa-solid fa-forward"></i>
+							QUICK ACTION!
+						</span>
+					</div>
+				</div>
+				<div class="col-lg-3 my-1">
+					<div class="border rounded d-flex p-3 align-items-center gap-3">
+						<span class="fa-solid fa-chess-knight text-secondary" style="font-size: 20px;padding-right:10px ;border-right: 1px solid gray;"></span>
+						<button class="btn text-secondary px-4" data-bs-toggle="modal" data-bs-target="#exampleModal"  style="font-size: 15px;background-color: #f6f8fb;" >New Quest!</button>
+					</div>
+				</div>
+				<div class="col-lg-3 my-1">
+					<div class="border rounded d-flex p-3 align-items-center gap-3">
+						<span class="fa-regular fa-note-sticky text-secondary" style="font-size: 20px;padding-right:10px ;border-right: 1px solid gray;"></span>
+						<button class="btn text-secondary px-4" data-bs-toggle="modal" data-bs-target="#modal-note" style="font-size: 15px;background-color: #f6f8fb;" >New Note!</button>
+					</div>
+				</div>
+				<div class="col-lg-3 my-1">
+					<div class="border rounded d-flex p-3 align-items-center gap-3">
+						<span class="fa-solid fa-hand-holding-dollar text-secondary" style="font-size: 20px;padding-right:10px ;border-right: 1px solid gray;"></span>
+						<button class="btn text-secondary px-4"  data-bs-toggle="modal" data-bs-target="#modal-income"  style="font-size: 15px;background-color: #f6f8fb;" >New Income!</button>
+					</div>
+				</div>
+				<div class="col-lg-3 my-1">
+					<div class="border rounded d-flex p-3 align-items-center gap-3">
+						<span class="fa-solid fa-money-bill-transfer text-secondary" style="font-size: 20px;padding-right:10px ;border-right: 1px solid gray;"></span>
+						<button class="btn text-secondary px-4"  data-bs-toggle="modal" data-bs-target="#modal-expense"  style="font-size: 15px;background-color: #f6f8fb;" >New Expense!</button>
+					</div>
+				</div>
+			</div>
+			<hr id="quest">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="row  border pb-4 mx-2  rounded">
+						<div class="col-12">
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-solid fa-table-cells-large ms-3"></i>
+									PLAYER
+								</span>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="row  border mx-2 p-2 rounded">
+								<div class="col-12 text-center">
+									<h3 class="fw-normal">
+										<i class="fa-regular fa-chess-pawn mx-2"></i>
+										John Doe
+									</h3>
+								</div>
+								<div class="col-12 my-1">
+									<span class="fw-bold">Level 1</span>
+									<div class="d-flex align-items-center gap-3">
+										<span>45/250</span>
+										<div class="progress progress-xl" style="width: 80%;">
+											<div class="progress-bar" style="width: 38%" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" aria-label="38% Complete">
+												<span class="visually-hidden">38% Complete</span>
+											</div>
+										</div>
+										<span>38%</span>
+									</div>
+								</div>
+								<div class="col-12 pb-4">
+									<span class="fw-bold">Rank E</span>
+									<span class="d-block ms-2">Daily : 0 exp</span>
+									<span class="d-block ms-2">Total : 0 exp</span>
+									<span class="d-block ms-2">Earn  : 0 Gold</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row  border pb-4 mt-4 mb-3 mx-2 rounded">
+						<div class="col-12">
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-solid fa-bars ms-3"></i>
+									NAVIGATION
+								</span>
+							</div>
+						</div>
+						<div class="col-12">
+							<ul class="list-unstyled fs-3 ms-5 ps-3">
+								<li class="my-2">
+									<a href="#home" class="link text-secondary">
+										<span class="border-bottom px-3 pb-1">HOME</span>
+									</a>
+								</li>
+								<li class="my-2">
+									<a href="#quest" class="link text-secondary">
+										<span class="border-bottom px-3 pb-1">QUEST</span>
+									</a>
+								</li>
+								<li class="my-2">
+									<a href="#resource" class="link text-secondary">
+										<span class="border-bottom px-3 pb-1">RESOURCE</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9" >
+					<div class="row mx-2">
+						<div class="col-12 border rounded"> 
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-solid fa-list ms-3"></i>
+									QUEST
+								</span>
+								<hr class="m-3">
+								<div class="table-responsive">
+									<table class="table table-vcenter table-nowrap" id="myTable">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th class="text-nowrap">Quest</th>
+												<th class="text-nowrap">Date</th>
+												<th class="text-nowrap">Difficulty</th>
+												<th class="text-nowrap">Exp</th>
+												<th class="text-nowrap">Gold</th>
+												<th class="text-nowrap">Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>2</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-yellow-lt">normal</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+											<tr>
+												<th>3</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-red-lt">Hard</span></td>
+												<td class="text-blue fw-bold">+24exp</td>
+												<td class="text-yellow fw-bold">+9gold</td>
+												<td><button class="btn bg-purple-lt">Progress</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 border rounded mt-3"> 
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-regular fa-clipboard ms-3"></i>
+									NOTES
+								</span>
+								<hr class="m-3">
+								<div class="table-responsive">
+									<table class="table table-vcenter table-nowrap">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th class="text-nowrap">Note</th>
+												<th class="text-nowrap">Date</th>
+												<th class="text-nowrap">Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>1</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-secondary text-white fw-normal px-2">Draft</span></td>
+											</tr>
+											<tr>
+												<th>2</th>
+												<td>Mandi</td>
+												<td>2 februari 2025</td>
+												<td><span class="badge bg-secondary text-white fw-normal px-2">Draft</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 border rounded mt-3" id="resource"> 
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-solid fa-arrow-trend-up ms-3"></i>
+									INCOME
+								</span>
+								<hr class="m-3">
+								<div class="table-responsive">
+									<table class="table table-vcenter table-nowrap">
+										<thead>
+											<tr>
+												<th class="text-nowrap">Name</th>
+												<th class="text-nowrap">Category</th>
+												<th class="text-nowrap">Amount</th>
+												<th class="text-nowrap">Date</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Work</th>
+												<td><span class="badge bg-yellow-lt">work</span></td>
+												<td>80.000</td>
+												<td>2 februari 2025</td>
+											</tr>
+											<tr>
+												<th>Jual kopi</th>
+												<td><span class="badge bg-purple-lt">sales</span></td>
+												<td>80.000</td>
+												<td>2 februari 2025</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 border rounded mt-3"> 
+							<div class="card-title">
+								<span class="d-flex fw-bold gap-3 mt-3 justify-content-start align-items-center" style="font-size: 20px;">
+									<i class="fa-solid fa-arrow-trend-down ms-3"></i>
+									EXPENSES
+								</span>
+								<hr class="m-3">
+								<div class="table-responsive">
+									<table class="table table-vcenter table-nowrap">
+										<thead>
+											<tr>
+												<th class="text-nowrap">Name</th>
+												<th class="text-nowrap">Category</th>
+												<th class="text-nowrap">Amount</th>
+												<th class="text-nowrap">Date</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Work</th>
+												<td><span class="badge bg-yellow-lt">work</span></td>
+												<td>80.000</td>
+												<td>2 februari 2025</td>
+											</tr>
+											<tr>
+												<th>Jual kopi</th>
+												<td><span class="badge bg-purple-lt">sales</span></td>
+												<td>80.000</td>
+												<td>2 februari 2025</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="exampleModal" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">New Quest</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="mb-3">
+								<label class="form-label">Quest Name</label>
+								<input type="text" class="form-control" name="example-text-input" placeholder="Your quest name" />
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="mb-3">
+								<label class="form-label">Due Date</label>
+								<input type="date" class="form-control" name="example-text-input" placeholder="Your due date" />
+							</div>
+						</div>
+					</div>
+					<label class="form-label">Difficulty type</label>
+					<div class="form-selectgroup-boxes row mb-3">
+						<div class="col-md-4">
+							<label class="form-selectgroup-item">
+								<input type="radio" name="report-type" value="easy" class="form-selectgroup-input" checked />
+								<span class="form-selectgroup-label d-flex align-items-center ">
+									<span class="me-3">
+										<span class="form-selectgroup-check"></span>
+									</span>
+									<span class="form-selectgroup-label-content">
+										<span class="form-selectgroup-title strong mb-1 text-success">Easy</span>
+									</span>
+								</span>
+							</label>
+						</div>
+						<div class="col-md-4">
+							<label class="form-selectgroup-item">
+								<input type="radio" name="report-type" value="normal" class="form-selectgroup-input" />
+								<span class="form-selectgroup-label d-flex align-items-center ">
+									<span class="me-3">
+										<span class="form-selectgroup-check"></span>
+									</span>
+									<span class="form-selectgroup-label-content">
+										<span class="form-selectgroup-title strong mb-1 text-yellow">Normal</span>
+									</span>
+								</span>
+							</label>
+						</div>
+						<div class="col-md-4">
+							<label class="form-selectgroup-item">
+								<input type="radio" name="report-type" value="hard" class="form-selectgroup-input" />
+								<span class="form-selectgroup-label d-flex align-items-center ">
+									<span class="me-3">
+										<span class="form-selectgroup-check"></span>
+									</span>
+									<span class="form-selectgroup-label-content">
+										<span class="form-selectgroup-title strong mb-1 text-red">Hard</span>
+									</span>
+								</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="mb-3">
+								<label class="form-label">Exp</label>
+								<input type="number" class="form-control" name="example-text-input" placeholder="Exp" />
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="mb-3">
+								<label class="form-label">Gold</label>
+								<input type="number" class="form-control" name="example-text-input" placeholder="Gold" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+						Cancel
+					</a>
+					<a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+						Create new quest
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="modal-note" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">New Note</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-4">
+							<div class="mb-3">
+								<label class="form-label">Note</label>
+								<input type="text" class="form-control" name="example-text-input" placeholder="Your note " />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="mb-3">
+								<label class="form-label">Due Date</label>
+								<input type="date" class="form-control" name="example-text-input" placeholder="Your due date" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="mb-3">
+								<label class="form-label">Status</label>
+								<input type="number" class="form-control" name="example-text-input" placeholder="Your status note" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+						Cancel
+					</a>
+					<a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+						Create new note
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" id="modal-income" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">New Income</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Income Name</label>
+								<input type="text" class="form-control" name="example-text-input" placeholder="Your income name" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Amount</label>
+								<input type="number" class="form-control" name="example-text-input" placeholder="Your income amount" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Date</label>
+								<input type="date" class="form-control" name="example-text-input" placeholder="Your date" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<div class="form-label">Category</div>
+								<select class="form-select">
+									<option value="Work">Work</option>
+									<option value="Sales">Sales</option>
+									<option value="Gift">Gift</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+						Cancel
+					</a>
+					<a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+						Create new income
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="modal-expense" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">New Expense</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Expense Name</label>
+								<input type="text" class="form-control" name="example-text-input" placeholder="Your expense name" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Amount</label>
+								<input type="number" class="form-control" name="example-text-input" placeholder="Your expense amount" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<label class="form-label">Date</label>
+								<input type="date" class="form-control" name="example-text-input" placeholder="Your date" />
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="mb-3">
+								<div class="form-label">Category</div>
+								<select class="form-select">
+									<option value="Food">Food</option>
+									<option value="Debt">Debt</option>
+									<option value="Equipment">Equipment</option>
+									<option value="Invest">Invest</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+						Cancel
+					</a>
+					<a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+						Create new expense
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="bg-vk text-center m-0  p-3 text-white">
+		copyright&copy;swiper
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0/dist/js/tabler.min.js"></script> 
+</body>
+</html>
