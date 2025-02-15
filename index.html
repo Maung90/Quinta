@@ -25,13 +25,14 @@
 			<div>
 				<i class="fa-solid fa-circle-notch mt-3 mx-3" style="font-size:3rem;"></i>
 			</div>
-			<div >
+			<div>
 				<h1 style="font-size:2rem;">
 					Quinta
 				</h1>
 				<h3>
 					System for upgrade your's
 				</h3>
+				<button class="btn btn-secondary-lt d-none" id="logout" onclick="logout()">logout</button>
 			</div>
 		</div>
 		<hr width="80%" class="mx-auto">
@@ -88,7 +89,7 @@
 								<div class="col-12 text-center">
 									<h3 class="fw-normal">
 										<i class="fa-regular fa-chess-pawn mx-2"></i>
-										John Doe
+										<span id="yu">Your Username</span>
 									</h3>
 								</div>
 								<div class="col-12 my-1">
@@ -166,79 +167,8 @@
 												<th class="text-nowrap">Status</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<th>2</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-yellow-lt">normal</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
-											<tr>
-												<th>3</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-red-lt">Hard</span></td>
-												<td class="text-blue fw-bold">+24exp</td>
-												<td class="text-yellow fw-bold">+9gold</td>
-												<td><button class="btn bg-purple-lt">Progress</button></td>
-											</tr>
+										<tbody id="table-quest">
+											
 										</tbody>
 									</table>
 								</div>
@@ -261,19 +191,8 @@
 												<th class="text-nowrap">Status</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<th>1</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-secondary text-white fw-normal px-2">Draft</span></td>
-											</tr>
-											<tr>
-												<th>2</th>
-												<td>Mandi</td>
-												<td>2 februari 2025</td>
-												<td><span class="badge bg-secondary text-white fw-normal px-2">Draft</span></td>
-											</tr>
+										<tbody id="table-notes">
+
 										</tbody>
 									</table>
 								</div>
@@ -297,7 +216,7 @@
 												<th class="text-nowrap">Date</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody id="table-incomes">
 											<tr>
 												<th>Work</th>
 												<td><span class="badge bg-yellow-lt">work</span></td>
@@ -333,19 +252,7 @@
 												<th class="text-nowrap">Date</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<th>Work</th>
-												<td><span class="badge bg-yellow-lt">work</span></td>
-												<td>80.000</td>
-												<td>2 februari 2025</td>
-											</tr>
-											<tr>
-												<th>Jual kopi</th>
-												<td><span class="badge bg-purple-lt">sales</span></td>
-												<td>80.000</td>
-												<td>2 februari 2025</td>
-											</tr>
+										<tbody id="table-expenses">
 										</tbody>
 									</table>
 								</div>
@@ -596,16 +503,330 @@
 		</div>
 	</div>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<div class="modal bg-secondary d-none" id="modal-login" tabindex="-1">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Login!</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12">
+							<div class="alert alert-important alert-success alert-dismissible d-none" id="alert-success" role="alert">
+								<div class="d-flex">
+									<div>
+										<i class="fa-regular fa-alert"></i>
+									</div>
+									<div>Login Berhasil!</div>
+								</div>
+								<a class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="close"></a>
+							</div>
 
+							<div class="alert alert-important alert-danger alert-dismissible  d-none" id="alert-gagal" role="alert">
+								<div class="d-flex">
+									<div>
+										<i class="fa-regular fa-alert"></i>
+									</div>
+									<div>Username salah atau tidak terdaftar!</div>
+								</div>
+								<a class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="close"></a>
+							</div>
+
+						</div>
+						<div class="col-12">
+							<div class="mb-3">
+								<label class="form-label">Username</label>
+								<input type="text" class="form-control" id="username" name="username" placeholder="Your username ... " />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
+						Cancel
+					</a>
+					<button class="btn btn-primary ms-auto" onclick="login()" data-bs-dismiss="modal">
+						Submit
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<div class="bg-vk text-center m-0  p-3 text-white">
 		copyright&copy;swiper
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0/dist/js/tabler.min.js"></script> 
+	<script>
+		const user_id = localStorage.getItem("user_id");
+		const username = localStorage.getItem("username");
+
+		const apiUrl = "https://script.google.com/macros/s/AKfycbxFfFIi0j86tDPY8BSUjO9fokea0mx4QPcDv66nJpllEN8voZLchJyVbcGQ7VOvCi2_/exec"; 
+		let dataPlayer = [], dataQuest = [];
+
+
+
+		if (user_id == null) {
+			document.getElementById('modal-login').classList.remove("d-none")
+			document.getElementById('modal-login').classList.add("d-block")
+
+			document.getElementById('logout').classList.remove("d-block")
+			document.getElementById('logout').classList.add("d-none")
+			loadDataPlayer()
+		}else{
+			document.getElementById('modal-login').classList.remove("d-block")
+			document.getElementById('modal-login').classList.add("d-none")
+
+			document.getElementById('logout').classList.remove("d-none")
+			document.getElementById('logout').classList.add("d-block")
+
+			document.getElementById('yu').innerHTML = username ?? "your name ";
+			loadDataQuest();
+			loadDataNotes();
+			loadDataIncomes();
+			loadDataExpenses();
+		}
+
+		function logout() {
+			localStorage.clear();
+			location.reload();
+		}
+
+		function login() {
+
+			document.getElementById('alert-success').classList.add("d-none")
+			document.getElementById('alert-success').classList.remove("d-block")
+			document.getElementById('alert-gagal').classList.add("d-none")
+			document.getElementById('alert-gagal').classList.remove("d-block")
+
+			const username = document.getElementById("username").value.trim();
+
+			if (!username) {
+				alert("Username tidak boleh kosong!");
+				return;
+			}
+
+			const user = dataPlayer.find(player => player.username === username);
+			
+			if (user) {
+				localStorage.setItem("username", username);
+				localStorage.setItem("user_id", user.ID);
+
+				document.getElementById('alert-success').classList.add("d-block")
+				document.getElementById('alert-success').classList.remove("d-none")
+
+				location.reload(); 
+			} else {
+				document.getElementById('alert-gagal').classList.add("d-block")
+				document.getElementById('alert-gagal').classList.remove("d-none")
+			}
+		}
+
+
+
+		async function loadDataPlayer() {
+			const table = 'Players';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+			dataPlayer = data;
+			console.log("Data berhasil part 1");
+		}
+
+		async function loadDataQuest() {
+			const table = 'Quest';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+			dataQuest = data;
+			let i = 1;
+			let headers = ['id', 'quest_name','date',	'difficulty', 'exp', 'gold', 'status'];
+			document.getElementById("table-quest").innerHTML = data
+			.filter(row => row.player_id == user_id)
+			.map(row => {
+				let dateObj = new Date(row.date);
+				let formattedDate = dateObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+
+				return `
+				<tr>
+				<th>${i++}</th>
+				<td>${row.quest_name}</td>
+				<td>${formattedDate}</td>
+				<td>
+				<span class="badge ${row.difficulty.toLowerCase() === 'easy' ? 'bg-lime-lt' : row.difficulty.toLowerCase() === 'normal'?'bg-yellow-lt' :'bg-red-lt'}">
+				${row.difficulty}
+				</span>
+				</td>
+				<td class="text-blue fw-bold">+${row.exp}exp</td>
+				<td class="text-yellow fw-bold">+${row.gold}gold</td>
+				<td>
+				${row.status.toLowerCase() === 'done' ? '<span class="text-green fw-bold">Done</span>' : `<button class="btn bg-purple-lt">${row.status}</button>`}
+				</td>
+				</tr>
+				`;
+			})
+			.join("");
+			
+			console.log("Data berhasil part 2");
+		}
+
+		async function loadDataNotes() {
+			const table = 'notes';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+			dataQuest = data;
+			let i = 1;
+			let headers = ['id', 'notes','date', 'status'];
+			document.getElementById("table-notes").innerHTML = data
+			.filter(row => row.player_id == user_id)
+			.map(row => {
+				let dateObj = new Date(row.date);
+				let formattedDate = dateObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+
+				return `
+				<tr>
+				<th>${i++}</th>
+				<td>${row.notes}</td>
+				<td>${formattedDate}</td>
+				<td>
+				<span class=" bg-secondary text-white fw-normal px-2">
+				${row.status}
+				</span>
+				</td>
+				</tr>
+				`;
+			})
+			.join("");
+			
+			console.log("Data berhasil part 3");
+		}
+
+		async function loadDataIncomes() {
+			const table = 'incomes';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+			dataQuest = data;
+			let i = 1;
+			let headers = ['name','category', 'amount','date'];
+			document.getElementById("table-incomes").innerHTML = data
+			.filter(row => row.player_id == user_id)
+			.map(row => {
+				let dateObj = new Date(row.date);
+				let formattedDate = dateObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+
+				return `
+				<tr>
+				<td>${row.name}</td>
+				<td>
+				<span class="badge  fw-normal px-2 ${row.category.toLowerCase() === 'work' ? 'bg-yellow-lt' : 'bg-purple-lt'}">
+				${row.category}
+				</span>
+				</td>
+				 <td>${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(row.amount)}</td>
+				<td>${formattedDate}</td>
+				</tr>
+				`;
+			})
+			.join("");
+			
+			console.log("Data berhasil part 3");
+		}
+
+		async function loadDataExpenses() {
+			const table = 'expenses';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+			dataQuest = data;
+			let i = 1;
+			let headers = ['name','category', 'amount','date'];
+			document.getElementById("table-expenses").innerHTML = data
+			.filter(row => row.player_id == user_id)
+			.map(row => {
+				let dateObj = new Date(row.date);
+				let formattedDate = dateObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+
+				return `
+				<tr>
+				<td>${row.name}</td>
+				<td>
+				<span class="badge  fw-normal px-2 ${row.category.toLowerCase() === 'invest' ? 'bg-green-lt' : 'bg-purple-lt'}">
+				${row.category}
+				</span>
+				</td>
+				 <td>${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(row.amount)}</td>
+				<td>${formattedDate}</td>
+				</tr>
+				`;
+			})
+			.join("");
+			
+			console.log("Data berhasil part 4");
+		}
+
+		async function loadData() {
+			const table = 'Players';
+			const response = await fetch(`${apiUrl}?sheet=${table}`);
+			const data = await response.json();
+
+			if (data.length === 0) return;
+
+			let headers = ['username', 'exp','level'];
+			document.getElementById("table-head").innerHTML = "<tr>" + headers.map(h => `<th>${h}</th>`).join("") + "</tr>";
+			document.getElementById("table-body").innerHTML = data.map(row => {
+
+				return `<tr>${headers.map(h => `<td>${row[h]}</td>`).join("")}</tr>`;
+
+			}).join("");
+
+		}
+
+
+
+
+		// document.getElementById("data-form").addEventListener("submit", async function (e) {
+		// 	e.preventDefault();
+
+		// 	const table = document.getElementById("table-select").value;
+		// 	const inputs = document.querySelectorAll("#input-fields input");
+		// 	let data = { sheet: table };
+
+		// 	inputs.forEach(input => data[input.id] = input.value);
+
+		// 	const response = await fetch(apiUrl, {
+		// 		method: "POST",
+		// 		headers: { "Content-Type": "application/json" },
+		// 		body: JSON.stringify(data),
+		// 	});
+
+		// 	if (await response.text() === "Success") {
+		// 		alert("Data berhasil ditambahkan!");
+		// 		loadData();
+		// 	} else {
+		// 		alert("Gagal menambahkan data.");
+		// 	}
+		// });
+
+		// loadData();
+	</script>
 </body>
 </html>
+
+<!-- https://script.google.com/macros/s/AKfycbxFfFIi0j86tDPY8BSUjO9fokea0mx4QPcDv66nJpllEN8voZLchJyVbcGQ7VOvCi2_/exec -->
+<!-- AKfycbxFfFIi0j86tDPY8BSUjO9fokea0mx4QPcDv66nJpllEN8voZLchJyVbcGQ7VOvCi2_ -->
